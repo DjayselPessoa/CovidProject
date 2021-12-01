@@ -5,5 +5,6 @@ LPG1 Projeto Final
 - Experimento Covid 
 - orientador LairsonLerao
 
-# eRD - extract rota dados - update 0.1
+# update 0.1
+- eRD - extract rota dados 
 - comentário adicionado com a informação acima nos arquivos 
