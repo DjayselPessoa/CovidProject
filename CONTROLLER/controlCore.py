@@ -1,6 +1,6 @@
 # from pathlib import Path
 # import os
-from DATA.eRD import ObjExtractRotaDados
+from DATA.eRD import ObjExtractRotaDados # eRD - extract rota dados
 
 
 class controlCore:
