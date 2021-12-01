@@ -7,4 +7,4 @@ LPG1 Projeto Final
 
 # update 0.1
 - eRD - extract rota dados 
-- comentário adicionado com a informação acima em um dos arquivos 
+- comentário adicionado com a informação acima em dois dos arquivos 
