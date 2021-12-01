@@ -10,16 +10,22 @@ while active:
     try:
         #  ------------------------------------------------
         os.chdir(os.path.dirname(__file__))
-        pegarDirRaiz = str(os.getcwd())
+        pegarDirRaiz = str(os.getcwd()) # preparando caminho do diretorio raiz até pasta da aplicação
         #  print("Ok1 ", pegarDirRaiz)
         #  print('- Verificando existência do arquivo -')
-        exist = ObjExtractRotaDados.caminho(pegarDirRaiz)
+        
+        exist = ObjExtractRotaDados.caminho(pegarDirRaiz) # testando a existência do arquivo 
         #  ------------------------------------------------
         if(exist is True):
             # time.sleep(2)
             # print('- O arquivo existe -')
             # time.sleep(1)
             # print('-'*50)
+            
+            # ---------------------------------------------
+            # iniciando tela menu -
+            # ---------------------------------------------
+            
             print('-'*50)
             print(' '*16 + 'EXPERIMENTO COVID' + ' '*16)
             print('-'*50)
@@ -28,13 +34,16 @@ while active:
             # print(escolha, type(escolha))
             if(escolha not in '012345'):
                 time.sleep(1)
-                raise ValueError("- UTILIZE SOMENTE NÚMEROS -")
+                raise ValueError("- UTILIZE SOMENTE OS NÚMEROS ABAIXO -") # tratamento da string recebida
             if(escolha == '5'):
                 time.sleep(1)
                 print('Finalizando aplicação!')
                 time.sleep(1)
                 active = False
                 continue
+            # ---------------------------------------------
+            # chamando o controller -
+            # ---------------------------------------------
             if(escolha == '0'):
                 active = ObjControlCore.control(escolha, pegarDirRaiz)
                 continue
@@ -51,7 +60,7 @@ while active:
                 active = ObjControlCore.control(escolha, pegarDirRaiz)
                 continue
         else:
-            print('O arquivo pode estar danificado -')
+            print('O arquivo pode estar danificado -') # erro mais plausível
             continue
     except ValueError as e:
         print('-'*50 + "\nLOG: -> ", e)
